@@ -9,18 +9,18 @@ public class TurnManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		rounds = 1;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if(rounds % 2 == 1)
-			player1.Time ();
-		if(rounds % 2 == 0)
-			player2.Time ();
-
+		
 		if (!player1.IsPlaying && !player2.IsPlaying)
 			rounds++;
+
+		if(rounds % 2 == 0)
+			player1.Play();
+		if(rounds % 2 == 1)
+			player2.Play();
 	}
 }
