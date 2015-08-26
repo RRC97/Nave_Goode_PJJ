@@ -8,10 +8,7 @@ public class PlayerController : MonoBehaviour
 
 	[SerializeField]
 	private GudeManager gude;
-	private bool isParentGude = true;
-
-	[SerializeField]
-	private CameraLookController camera;
+	private bool isParentGude = true, isPlaying= true;
 
 	void Update()
 	{
@@ -23,13 +20,25 @@ public class PlayerController : MonoBehaviour
 		{
 			gude.Play(transform.eulerAngles, force);
 			isParentGude = false;
-			camera.gameObject.SetActive(true);
-			camera.focus = gude.transform;
 		}
 		
 		if (isParentGude)
 			gude.transform.parent = transform;
 		else
 			gude.transform.parent = null;
+
+		gameObject.SetActive (isPlaying);
+	}
+
+	public void Time()
+	{
+		transform.position = gude.transform.position;
+		isPlaying = true;
+		gameObject.SetActive (isPlaying);
+	}
+
+	public bool IsPlaying
+	{
+		get { return isPlaying; }
 	}
 }

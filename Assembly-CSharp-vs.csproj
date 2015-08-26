@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\GudeManager.cs" />
      <Compile Include="Assets\Scripts\OptionButton.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\TurnManager.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Resources\Shader\Gude.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
