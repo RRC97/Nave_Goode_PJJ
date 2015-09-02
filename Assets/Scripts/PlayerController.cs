@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
 	[SerializeField]
 	private GudeManager gude;
+	[SerializeField]
+	private Scrollbar scrollbar;
 
 	private float sensibility = 5, force;
 
@@ -15,11 +18,13 @@ public class PlayerController : MonoBehaviour
 	void Update()
 	{
 		float rotateY = Input.GetAxis ("Mouse X") * sensibility;
+
 		
 		transform.Rotate (0, rotateY, 0);
 
 		if(linked)
 		{
+			scrollbar.size = (float)force / 30;
 			gude.enabled = false;
 			gude.transform.parent = transform;
 			gude.transform.localPosition = distance;

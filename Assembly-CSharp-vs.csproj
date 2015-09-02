@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{9FA8526C-D556-0424-130C-69766F0CABF6}</ProjectGuid>
+	<ProjectGuid>{0067CBBC-A60C-8681-4ABA-E7B9CDAFE8EC}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -55,7 +55,7 @@
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Resources\Shader\Gude.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/vitor.oliveira/Desktop/Gude/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Joao.Barbosa/Desktop/Nave_Goode_PJJ/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
@@ -63,7 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{5221E1B6-B733-AE84-3481-CD931D705AC0}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+      <Project>{C7D14020-79C4-2DA2-201A-1755D8E0FB0F}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

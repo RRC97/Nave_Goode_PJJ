@@ -12,23 +12,22 @@ public class GudeManager : MonoBehaviour
 	private float time;
 	void Update ()
 	{
+		rigidbody.AddForce (-rigidbody.velocity / 100, ForceMode.VelocityChange);
+
+		if (isPlay && time > 2f && rigidbody.velocity.magnitude < 0.2f)
+		{
+			isPlay = false;
+			time = 0;
+		}
+		
+		look.gameObject.SetActive(isPlay);
+
 		if (isPlay)
 		{
 			rigidbody.constraints = RigidbodyConstraints.None;
 			time += Time.deltaTime;
 		}
 		else rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-
-		rigidbody.AddForce (-rigidbody.velocity / 100, ForceMode.VelocityChange);
-
-		if (time > 2f && (int)rigidbody.velocity.magnitude < 1)
-		{
-			isPlay = false;
-			time = 0;
-			rigidbody.velocity = Vector3.zero;
-		}
-		
-		look.gameObject.SetActive(isPlay);
 	}
 	public bool IsPlay
 	{
