@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\CameraLookController.cs" />
      <Compile Include="Assets\Scripts\ChangeSceneButton.cs" />
      <Compile Include="Assets\Scripts\GudeManager.cs" />
+     <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\OptionButton.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\TurnManager.cs" />

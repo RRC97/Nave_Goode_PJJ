@@ -18,9 +18,9 @@ public class TurnManager : MonoBehaviour
 		if (!player1.IsPlaying && !player2.IsPlaying)
 			rounds++;
 
-		if(rounds % 2 == 0)
-			player1.Play();
 		if(rounds % 2 == 1)
+			player1.Play();
+		if(rounds % 2 == 0)
 			player2.Play();
 	}
 }

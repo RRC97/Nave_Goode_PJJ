@@ -18,8 +18,6 @@ public class PlayerController : MonoBehaviour
 	void Update()
 	{
 		float rotateY = Input.GetAxis ("Mouse X") * sensibility;
-
-		
 		transform.Rotate (0, rotateY, 0);
 
 		if(linked)
@@ -27,11 +25,13 @@ public class PlayerController : MonoBehaviour
 			scrollbar.size = (float)force / 30;
 			gude.enabled = false;
 			gude.transform.parent = transform;
+			gude.gameObject.layer = 9;
 			gude.transform.localPosition = distance;
 		}
 		else
 		{
 			gude.enabled = true;
+			gude.gameObject.layer = 8;
 			gude.transform.parent = null;
 
 			if(!gude.IsPlay)

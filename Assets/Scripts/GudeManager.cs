@@ -24,10 +24,8 @@ public class GudeManager : MonoBehaviour
 
 		if (isPlay)
 		{
-			rigidbody.constraints = RigidbodyConstraints.None;
 			time += Time.deltaTime;
 		}
-		else rigidbody.constraints = RigidbodyConstraints.FreezeAll;
 	}
 	public bool IsPlay
 	{
