@@ -5,7 +5,7 @@ public class TurnManager : MonoBehaviour
 {
 	[SerializeField]
 	private PlayerController player1, player2;
-	private int rounds;
+	public int rounds;
 	// Use this for initialization
 	void Start ()
 	{

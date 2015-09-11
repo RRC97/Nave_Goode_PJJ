@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Inventory : MonoBehaviour
 {
 	[SerializeField]
-	List<GudeManager> gudes = new List<GudeManager>();
+	List<GudeInventory> gudes = new List<GudeInventory>();
 	bool show;
 	Rect windowRect;
 	// Use this for initialization
@@ -40,5 +40,15 @@ public class Inventory : MonoBehaviour
 			float scale = (windowRect.width - 110) / 10;
 			GUI.Box(new Rect(10 + i * scale + i * 10, 30, scale, scale), ""+(i + 1)%10);
 		}
+		for(int i = 0; i < gudes.Count; i++)
+		{
+			float scale = (windowRect.width - 110) / 10;
+			GUI.DrawTexture(new Rect(10 + i * scale + i * 10, 30, scale, scale), gudes[i].Texture);
+		}
 	}
+	public void Add(GudeInventory gude)
+	{
+		gudes.Add (gude);
+	}
+
 }

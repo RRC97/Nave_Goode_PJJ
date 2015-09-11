@@ -7,6 +7,7 @@ public class OptionButton : MonoBehaviour
 	private GameObject[] options;
 	private bool shown;
 
+
 	public void OnClick()
 	{
 		shown = !shown;
