@@ -16,18 +16,15 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	
+		if (GameObject.FindObjectsOfType (typeof(GudeCollision)).Length <= 0)
+			print (1);
 	}
 
 	void OnTriggerExit(Collider c)
 	{
 		if(c.gameObject.layer == 8)
 		{
-			if(turnManager.rounds % 2 == 1)
-				player1.Add(new GudeInventory(c.renderer.material.mainTexture));
-			if(turnManager.rounds % 2 == 0)
-				player2.Add(new GudeInventory(c.renderer.material.mainTexture));
-			c.gameObject.SetActive(false);
+			c.GetComponent<GudeCollision>().Capture();
 		} 
 	}
 }

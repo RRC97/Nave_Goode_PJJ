@@ -47,17 +47,17 @@ public class PlayerController : MonoBehaviour
 				isPlaying = false;
 			}
 		}
-
+		if (Input.GetMouseButton (0))
+		{
+			if(force < 40)
+				force++;
+		}
+		
 		if(Input.GetMouseButtonUp(0))
 		{
 			gude.Play(transform.eulerAngles, force);
 			linked = false;
 			force = 0;
-		}
-		if (Input.GetMouseButton (0))
-		{
-			if(force < 40)
-				force++;
 		}
 		gameObject.SetActive (isPlaying);
 	}

@@ -9,19 +9,16 @@ public class GudeManager : MonoBehaviour
 	private bool isPlay;
 	[SerializeField]
 	private CameraLookController look;
-	private float time;
-	private GudeInventory inventory;
-	public GudeInventory Inventory
+	[SerializeField]
+	private Inventory inventory;
+	public Inventory Inventory
 	{
 		get
 		{
 			return inventory;
 		}
 	}
-	void Awake()
-	{
-		inventory = new GudeInventory (renderer.material.mainTexture);
-	}
+	private float time;
 	void Update ()
 	{
 		rigidbody.AddForce (-rigidbody.velocity / 100, ForceMode.VelocityChange);
