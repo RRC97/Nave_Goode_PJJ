@@ -13,9 +13,22 @@ public class PlayerController : MonoBehaviour
 
 	private float sensibility = 5, force;
 
-	private Vector3 distance =new Vector3(0.5f, -0.5f, 1);
+	private Vector3 distance = new Vector3(0.5f, -0.5f, 1);
 
-	public bool linked, isPlaying;
+	private bool linked, isPlaying;
+
+	void Awake()
+	{
+		linked = true;
+		gude.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+		scrollbar.size = (float)force / 40;
+		gude.enabled = false;
+		gude.transform.parent = transform;
+		gude.gameObject.layer = 9;
+		gude.transform.localPosition = distance;
+		crosshair.gameObject.SetActive(true);
+		scrollbar.gameObject.SetActive(true);
+	}
 
 	void FixedUpdate()
 	{
@@ -63,11 +76,25 @@ public class PlayerController : MonoBehaviour
 	}
 	public void Play()
 	{
-		isPlaying = true;
-		gameObject.SetActive (isPlaying);
+		if(!isPlaying)
+		{
+			gude.SetLastPosition(gude.transform.position);
+			isPlaying = true;
+			Vector3 newPos = gude.transform.position;
+			newPos.y = 0.8f;
+			transform.position = newPos;
+			gameObject.SetActive (isPlaying);
+		}
 	}
 	public bool IsPlaying
 	{
 		get{ return isPlaying;}
+	}
+	public GudeManager Gude
+	{
+		get
+		{
+			return gude;
+		}
 	}
 }

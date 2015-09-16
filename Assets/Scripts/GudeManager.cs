@@ -3,26 +3,25 @@ using System.Collections;
 
 public class GudeManager : MonoBehaviour
 {
-	string playerTime = "Player1";
-
 	[SerializeField]
 	private bool isPlay;
 	[SerializeField]
 	private CameraLookController look;
 	[SerializeField]
 	private Inventory inventory;
-	public Inventory Inventory
-	{
-		get
-		{
-			return inventory;
-		}
-	}
 	private float time;
-	void Update ()
+	private GudeInventory gude;
+	private Vector3 lastPosition;
+	void Awake()
+	{
+		gude = new GudeInventory (renderer.material);
+	}
+	void FixedUpdate ()
 	{
 		rigidbody.AddForce (-rigidbody.velocity / 100, ForceMode.VelocityChange);
-
+	}
+	void Update ()
+	{
 		if (isPlay && time > 2f && rigidbody.velocity.magnitude < 0.2f)
 		{
 			isPlay = false;
@@ -40,7 +39,14 @@ public class GudeManager : MonoBehaviour
 	{
 		get{ return isPlay;}
 	}
-
+	
+	public Inventory Inventory
+	{
+		get
+		{
+			return inventory;
+		}
+	}
 	public void Play(Vector3 r, float f)
 	{
 		if(!isPlay)
@@ -51,6 +57,29 @@ public class GudeManager : MonoBehaviour
 			transform.eulerAngles = r;
 			rigidbody.AddForce (transform.forward * f, ForceMode.Impulse);
 			isPlay = true;
+		}
+	}
+
+	public void Reset()
+	{
+		transform.position = lastPosition;
+	}
+
+	public void SetLastPosition(Vector3 pos)
+	{
+		lastPosition = pos;
+	}
+
+	public GudeInventory Gude
+	{
+		get
+		{
+			return gude;
+		}
+		set
+		{
+			gude = value;
+			renderer.material = gude.Material;
 		}
 	}
 }

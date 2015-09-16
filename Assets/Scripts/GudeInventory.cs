@@ -3,16 +3,16 @@ using System.Collections;
 
 public class GudeInventory
 {
-	Texture texture;
-	public GudeInventory(Texture t)
+	Material material;
+	public GudeInventory(Material m)
 	{
-		texture = t;
+		material = m;
 	}
-	public Texture Texture
+	public Material Material
 	{
 		get
 		{
-			return texture;
+			return material;
 		}
 	}
 }
