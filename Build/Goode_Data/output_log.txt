@@ -1,0 +1,48 @@
+Initialize engine version: 4.6.2f1 (bd99309c2ad7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 6450 (Microsoft Corporation - WDDM v1.20) (ID=0x6779)
+    Vendor:   ATI
+    VRAM:     1008 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.047 seconds
+desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Joao.Barbosa\Desktop\Nave_Goode_PJJ\Build\Goode_Data\Managed\System.dll (this message is harmless)
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
+UnloadTime: 2.682633 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 399.
+Total: 0.923994 ms (FindLiveObjects: 0.014187 ms CreateObjectMapping: 0.008753 ms MarkObjects: 0.142478 ms  DeleteObjects: 0.258694 ms)
+
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
+Player 1 se salvou
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 1.161860 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 186.
+Total: 1.704304 ms (FindLiveObjects: 0.007546 ms CreateObjectMapping: 0.007848 ms MarkObjects: 0.147307 ms  DeleteObjects: 1.052285 ms)
+
+UnloadTime: 0.394229 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 214.
+Total: 0.619719 ms (FindLiveObjects: 0.007546 ms CreateObjectMapping: 0.009055 ms MarkObjects: 0.177795 ms  DeleteObjects: 0.002414 ms)
+

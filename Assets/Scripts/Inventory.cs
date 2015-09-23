@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour
 {
+	[SerializeField]
+	private Text count;
+
 	List<GudeInventory> gudes;
 	bool show;
 	Rect windowRect;
@@ -48,6 +52,7 @@ public class Inventory : MonoBehaviour
 				}
 			}
 		}
+		count.text = gameObject.name + ": " + string.Format ("{0:00}", (gudes.Count + 1));
 	}
 
 	void OnGUI ()
